@@ -60,6 +60,7 @@ from .block import (
     SCDown,
     TorchVision,
 )
+from .mamba import C2Mamba
 from .conv import (
     CBAM,
     ChannelAttention,
@@ -110,6 +111,7 @@ __all__ = (
     "AIFI",
     "C1",
     "C2",
+    "C2Mamba",
     "C2PSA",
     "C3",
     "C3TR",
