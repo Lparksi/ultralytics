@@ -205,12 +205,14 @@ mamba-ssm = ["torch", "ninja"]
 [[tool.uv.index]]
 name = "pytorch-cu132"
 url = "https://download.pytorch.org/whl/nightly/cu132"
-explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-triton"
+url = "https://download.pytorch.org/whl/nightly/cu132/triton"
 
 [[tool.uv.index]]
 name = "pytorch-nightly"
 url = "https://download.pytorch.org/whl/nightly"
-explicit = true
 
 [tool.uv]
 environments = [
@@ -222,5 +224,6 @@ environments = [
 [tool.uv.sources]
 torch = { index = "pytorch-cu132", marker = "sys_platform != 'darwin'" }
 torchvision = { index = "pytorch-cu132", marker = "sys_platform != 'darwin'" }
-triton = { index = "pytorch-cu132", marker = "sys_platform == 'linux'" }
+triton = { index = "pytorch-triton", marker = "sys_platform == 'linux'" }
+
 
