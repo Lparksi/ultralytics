@@ -220,6 +220,7 @@ environments = [
 ]
 
 [tool.uv.sources]
-torch = { index = "pytorch-cu132" }
-torchvision = { index = "pytorch-cu132" }
-triton = { index = "pytorch-nightly" }
+torch = { index = "pytorch-cu132", marker = "sys_platform != 'darwin'" }
+torchvision = { index = "pytorch-cu132", marker = "sys_platform != 'darwin'" }
+triton = { index = "pytorch-cu132", marker = "sys_platform == 'linux'" }
+
