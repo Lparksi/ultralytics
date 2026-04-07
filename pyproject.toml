@@ -207,6 +207,11 @@ name = "pytorch-cu132"
 url = "https://download.pytorch.org/whl/nightly/cu132"
 explicit = true
 
+[[tool.uv.index]]
+name = "pytorch-nightly"
+url = "https://download.pytorch.org/whl/nightly"
+explicit = true
+
 [tool.uv]
 environments = [
     "sys_platform == 'linux' and platform_machine == 'x86_64'",
@@ -217,3 +222,4 @@ environments = [
 [tool.uv.sources]
 torch = { index = "pytorch-cu132" }
 torchvision = { index = "pytorch-cu132" }
+triton = { index = "pytorch-nightly" }
